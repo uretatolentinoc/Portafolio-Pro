@@ -1,1201 +1,1326 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Richard hanrick</h1>
-
-          <p class="title">Web developer</p>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio Personal | Cristian W. Ureta Tolentino</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/v0-fixes.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <!-- CAMBIO MANUAL: sustituir avatar y texto alternativo por los definitivos. -->
+            <img
+              src="./assets/images/my-avatar.png"
+              alt="Retrato de Cristian"
+              width="80"
+            />
+          </figure>
+          <div class="info-content">
+            <!-- CAMBIO MANUAL: sustituir nombre y cargo por los definitivos. -->
+            <h1 class="name" title="Cristian U Tolentino">
+              Cristian U. Tolentino
+            </h1>
+            <p class="title">Ingeniero - Desarrollador</p>
+          </div>
+          <button
+            class="info_more-btn"
+            type="button"
+            data-sidebar-btn
+            aria-expanded="false"
+            aria-controls="sidebar-details"
+          >
+            <span>Mostrar contactos</span>
+            <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
+          </button>
         </div>
 
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">June 23, 1982</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Sacramento, California, USA</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
-      </nav>
-
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-            I enjoy
-            turning complex problems into simple, beautiful and intuitive designs.
-          </p>
-
-          <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
+        <div class="sidebar-info_more" id="sidebar-details">
+          <div class="separator"></div>
+          <ul class="contacts-list">
+            <!-- CAMBIO MANUAL: sustituir todos los datos de contacto ficticios. -->
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
               </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
+              <div class="contact-info">
+                <p class="contact-title">Correo electrónico</p>
+                <a href="mailto:richard@example.com" class="contact-link"
+                  >ureta.tolentino.c@gmail.com</a
+                >
               </div>
-
             </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon
+                  name="phone-portrait-outline"
+                  aria-hidden="true"
+                ></ion-icon>
               </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
+              <div class="contact-info">
+                <p class="contact-title">Teléfono</p>
+                <a href="tel:+12133522795" class="contact-link"
+                  >+51 981 370 312</a
+                >
               </div>
-
             </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
               </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
+              <div class="contact-info">
+                <p class="contact-title">Fecha de nacimiento</p>
+                <time datetime="1982-06-23">09 de agosto de 1995</time>
               </div>
-
             </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
               </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Photography</h4>
-
-                <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
-                </p>
+              <div class="contact-info">
+                <p class="contact-title">Ubicación</p>
+                <address>Ate, Lima, Perú</address>
               </div>
-
             </li>
-
           </ul>
 
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
+          <div class="separator"></div>
+          <ul class="social-list" aria-label="Redes sociales">
+            <!-- CAMBIO MANUAL: estos elementos son informativos hasta que existan URLs reales. Cambiar <span> por <a href="..."> únicamente cuando el enlace exista. -->
+            <li class="social-item">
+              <span class="social-link" aria-label="Facebook"
+                ><ion-icon name="logo-facebook" aria-hidden="true"></ion-icon
+              ></span>
             </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
+            <li class="social-item">
+              <span class="social-link" aria-label="X / Twitter"
+                ><ion-icon name="logo-twitter" aria-hidden="true"></ion-icon
+              ></span>
             </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
+            <li class="social-item">
+              <span class="social-link" aria-label="Instagram"
+                ><ion-icon name="logo-instagram" aria-hidden="true"></ion-icon
+              ></span>
             </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
           </ul>
+        </div>
+      </aside>
 
-        </section>
+      <div class="main-content">
+        <nav class="navbar" aria-label="Navegación principal">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button
+                class="navbar-link active"
+                type="button"
+                data-nav-link
+                data-nav-target="about"
+                aria-current="page"
+              >
+                Sobre mí
+              </button>
+            </li>
+            <li class="navbar-item">
+              <button
+                class="navbar-link"
+                type="button"
+                data-nav-link
+                data-nav-target="resume"
+              >
+                Currículum
+              </button>
+            </li>
+            <li class="navbar-item">
+              <button
+                class="navbar-link"
+                type="button"
+                data-nav-link
+                data-nav-target="portfolio"
+              >
+                Portafolio
+              </button>
+            </li>
+            <li class="navbar-item">
+              <button
+                class="navbar-link"
+                type="button"
+                data-nav-link
+                data-nav-target="blog"
+              >
+                Blog
+              </button>
+            </li>
+            <li class="navbar-item">
+              <button
+                class="navbar-link"
+                type="button"
+                data-nav-link
+                data-nav-target="contact"
+              >
+                Contacto
+              </button>
+            </li>
+          </ul>
+        </nav>
 
-
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-
+        <article
+          class="about active"
+          data-page="about"
+          aria-labelledby="about-title"
+        >
+          <header>
+            <h2 class="h2 article-title" id="about-title">Sobre mí</h2>
+          </header>
+          <section class="about-text">
+            <!-- CAMBIO MANUAL: sustituir el contenido ficticio por la presentación definitiva. -->
+            <p>
+              Soy Ingeniero Civil de profesión, con una especialidad en
+              Ingenieria Vial, incorporado al colegio de Ingenieros de Lima -
+              Perú con CIP N° 267591 y una trayectoria profesional colegiado de
+              5 años. Disfruto convertir problemas complejos en soluciones
+              simples, atractivas e intuitivas.
+            </p>
+            <p>
+              En mis tiempo libres soy Desarrollar Web - full Stack, trabajo
+              consiste en construir sitios web funcionales y fáciles de usar sin
+              descuidar su presentación. Busco aportar una identidad clara al
+              producto y comunicar su mensaje de la forma más efectiva posible.
+            </p>
           </section>
 
-        </div>
-
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">University school of the arts</h4>
-
-              <span>2007 — 2008</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">New york academy of art</h4>
-
-              <span>2006 — 2007</span>
-
-              <p class="timeline-text">
-                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
-                omnis..
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">High school of art and design</h4>
-
-              <span>2002 — 2004</span>
-
-              <p class="timeline-text">
-                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
-                magni dolores
-                eos.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Creative director</h4>
-
-              <span>2015 — Present</span>
-
-              <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Art director</h4>
-
-              <span>2013 — 2015</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Web designer</h4>
-
-              <span>2010 — 2013</span>
-
-              <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="50">50%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
+          <section class="service" aria-labelledby="services-title">
+            <h3 class="h3 service-title" id="services-title">Qué hago</h3>
+            <!-- CAMBIO MANUAL: sustituir servicios, iconos y descripciones por los definitivos. -->
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-obras.svg"
+                    alt="Icono de Ingeniero"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Residente de Obras</h4>
+                  <p class="service-item-text">
+                    Ingeniero Civil encargado de Obras Publicas y Privadas a
+                    nivel nacional. Especialista en obras de Infraestructura
+                    Vial
+                  </p>
+                </div>
               </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-design.svg"
+                    alt="Icono de consultor"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Consultor de Obras</h4>
+                  <p class="service-item-text">
+                    Elaboración de Expedientes Tecnicos a nivel de Ingeniería de
+                    Detalle (Por especialidades) incluyendo el nivel Operativo y
+                    de Gestion.
+                  </p>
+                </div>
               </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-design-web.svg"
+                    alt="Icono de diseño web"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Diseño web</h4>
+                  <p class="service-item-text">
+                    Diseños responsivos modernos y de alta calidad desarrollado
+                    con criterio profesional y etico.
+                  </p>
+                </div>
               </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Icono de desarrollo web"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Desarrollo web</h4>
+                  <p class="service-item-text">
+                    Desarrollo de sitios web de alta calidad con una
+                    implementación mantenible.
+                  </p>
+                </div>
               </li>
-
             </ul>
+          </section>
 
+          <section class="testimonials" aria-labelledby="testimonials-title">
+            <h3 class="h3 testimonials-title" id="testimonials-title">
+              Referencias Profesionales
+            </h3>
+            <!-- CAMBIO MANUAL: sustituir testimonios, nombres y avatares por datos reales. -->
+            <ul class="testimonials-list has-scrollbar">
+              <li class="testimonials-item">
+                <div
+                  class="content-card"
+                  data-testimonials-item
+                  role="button"
+                  tabindex="0"
+                  aria-haspopup="dialog"
+                >
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-1.png"
+                      alt="refencia uno"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Ing. P. Valerio Hinostroza
+                  </h4>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Gerente General del Instituto Vial Provincial (IVP-PASCO).
+                      Exjefe directo en mi etapa laboral como Jefe del Área de
+                      Operaciones y Monitor Vial.
+                    </p>
+                    <p>Correo: npvalerioh@gmail.com</p>
+                  </div>
+                </div>
+              </li>
+              <li class="testimonials-item">
+                <div
+                  class="content-card"
+                  data-testimonials-item
+                  role="button"
+                  tabindex="0"
+                  aria-haspopup="dialog"
+                >
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-1.png"
+                      alt="referencia dos"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Ing. M. Jorge Guerra
+                  </h4>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Especialista en Priorización, Monitoreo y Seguimiento de
+                      Provias Descentralizado (MTC). Supervisor directo en mi
+                      etapa laboral como Jefe de Operaciones del IVP-PASCO.
+                    </p>
+                    <p>Correo: mjorge@proviasdes.gob.pe</p>
+                  </div>
+                </div>
+              </li>
+              <li class="testimonials-item">
+                <div
+                  class="content-card"
+                  data-testimonials-item
+                  role="button"
+                  tabindex="0"
+                  aria-haspopup="dialog"
+                >
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-3.png"
+                      alt="Emily Evans"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Emily Evans
+                  </h4>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Richard fue contratado para crear una identidad
+                      corporativa. Quedamos muy satisfechos con el trabajo
+                      realizado, su experiencia y su atención a las necesidades
+                      del cliente.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="testimonials-item">
+                <div
+                  class="content-card"
+                  data-testimonials-item
+                  role="button"
+                  tabindex="0"
+                  aria-haspopup="dialog"
+                >
+                  <figure class="testimonials-avatar-box">
+                    <img
+                      src="./assets/images/avatar-4.png"
+                      alt="Henry William"
+                      width="60"
+                      data-testimonials-avatar
+                    />
+                  </figure>
+                  <h4
+                    class="h4 testimonials-item-title"
+                    data-testimonials-title
+                  >
+                    Henry William
+                  </h4>
+                  <div class="testimonials-text" data-testimonials-text>
+                    <p>
+                      Richard fue contratado para crear una identidad
+                      corporativa. Quedamos muy satisfechos con el trabajo
+                      realizado, su experiencia y su atención a las necesidades
+                      del cliente.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <div class="modal-container" data-modal-container aria-hidden="true">
+            <div class="overlay" data-overlay></div>
+            <section
+              class="testimonials-modal"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="testimonial-modal-title"
+            >
+              <button
+                class="modal-close-btn"
+                type="button"
+                data-modal-close-btn
+                aria-label="Cerrar testimonio"
+              >
+                <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+              </button>
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img
+                    src="./assets/images/avatar-1.png"
+                    alt="referencia uno"
+                    width="80"
+                    data-modal-img
+                  />
+                </figure>
+                <img
+                  src="./assets/images/icon-quote.svg"
+                  alt="comillas"
+                  aria-hidden="true"
+                />
+              </div>
+              <div class="modal-content">
+                <h4
+                  class="h3 modal-title"
+                  id="testimonial-modal-title"
+                  data-modal-title
+                >
+                  Ing. P. Valerio Hinostroza
+                </h4>
+                <time datetime="2025-01-14">14 de enero de 2025</time>
+                <div data-modal-text>
+                  <p>
+                    Richard fue contratado para crear una identidad corporativa.
+                    Quedamos muy satisfechos con el trabajo realizado, su
+                    experiencia y su atención a las necesidades del cliente.
+                  </p>
+                </div>
+              </div>
+            </section>
           </div>
 
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Finance</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Orizon</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
+          <section class="clients" aria-labelledby="clients-title">
+            <h3 class="h3 clients-title" id="clients-title">Clientes</h3>
+            <!-- CAMBIO MANUAL: sustituir logotipos ficticios por clientes reales. Son elementos informativos; no añadir enlace salvo que exista un destino real. -->
+            <ul class="clients-list has-scrollbar">
+              <li class="clients-item">
+                <img
+                  src="./assets/images/cliente-01.png"
+                  alt="Logotipo de cliente 1"
+                />
+              </li>
+              <li class="clients-item">
+                <img
+                  src="./assets/images/cliente-02.png"
+                  alt="Logotipo de cliente 2"
+                />
+              </li>
+              <li class="clients-item">
+                <img
+                  src="./assets/images/cliente-03.png"
+                  alt="Logotipo de cliente 3"
+                />
+              </li>
+              <li class="clients-item">
+                <img
+                  src="./assets/images/cliente-04.png"
+                  alt="Logotipo de cliente 4"
+                />
+              </li>
+              <li class="clients-item">
+                <img
+                  src="./assets/images/cliente-05.png"
+                  alt="Logotipo de cliente 5"
+                />
+              </li>
+              <li class="clients-item">
+                <img
+                  src="./assets/images/cliente-06.png"
+                  alt="Logotipo de cliente 6"
+                />
+              </li>
+            </ul>
+          </section>
+
+          <!-- SUGERENCIA V1, NO IMPLEMENTADA: Certificaciones y licencias profesionales. -->
+          <!-- SUGERENCIA V1, NO IMPLEMENTADA: Resultados o impacto medible de proyectos. -->
+          <!-- SUGERENCIA V1, NO IMPLEMENTADA: Metodología de trabajo / proceso. -->
+          <!-- SUGERENCIA V1, NO IMPLEMENTADA: Descarga de CV o dossier en PDF. -->
+        </article>
+
+        <article
+          class="resume"
+          data-page="resume"
+          aria-labelledby="resume-title"
+        >
+          <header>
+            <h2 class="h2 article-title" id="resume-title">Currículum</h2>
+          </header>
+          <section class="timeline" aria-labelledby="education-title">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline" aria-hidden="true"></ion-icon>
+              </div>
+              <h3 class="h3" id="education-title">Educación</h3>
+            </div>
+            <!-- CAMBIO MANUAL: sustituir formación ficticia por la definitiva. -->
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Universidad Ricardo Palma
+                </h4>
+                <span>2015 — 2019</span>
+                <p class="timeline-text">Titulo Profesional:</p>
+                <p class="timeline-text">
+                  Formación Profesional en Ingenieria Civil.
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Universidad Ricardo Palma
+                </h4>
+                <span>2021 — 2022</span>
+                <p class="timeline-text">Maestria:</p>
+                <p class="timeline-text">
+                  Formación Profesional en Ingeniero Vial con Mención en
+                  Carreteras, Puentesy Túneles.
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Universidad Peruana de Ciencias Aplicadas
+                </h4>
+                <span>2019 — 2020</span>
+                <p class="timeline-text">Diplomado:</p>
+                <p class="timeline-text">
+                  Formación Profesional en Diseño y Gestión de Proyectos Viales.
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Universidad Nacional de Trujillo
+                </h4>
+                <span>2019 — 2020</span>
+                <p class="timeline-text">Especialización:</p>
+                <p class="timeline-text">
+                  Programa especializado en Seguridad y Salud en el Trabajo.
+                </p>
+              </li>
+            </ol>
+          </section>
+          <section class="timeline" aria-labelledby="experience-title">
+            <div class="title-wrapper">
+              <div class="icon-box">
+                <ion-icon name="book-outline" aria-hidden="true"></ion-icon>
+              </div>
+              <h3 class="h3" id="experience-title">Experiencia</h3>
+            </div>
+            <!-- CAMBIO MANUAL: sustituir experiencia ficticia por la definitiva. -->
+            <ol class="timeline-list">
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Ingeniero Residente de Obra
+                </h4>
+                <span>Empresa | Constructora & Minería URETA S.A.C.</span>
+                <span>2026 — Presente</span>
+                <p class="timeline-text">
+                  Ingeniero Residente encargado de la Ejecución de Proyecto
+                  IOARR: "Renovacion de Puente; en el (la) Rio las Vegas del
+                  camino vecinal con CUI N°2703479".
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  SSOMA - Especialista en Seguridad y Salud en el Trabajo
+                </h4>
+                <span>Empresa | Consorcio Tapuc</span>
+                <span>2025 — 2025</span>
+                <p class="timeline-text">
+                  Ingeniero de Seguridad encargo en la identificacion de
+                  peligros, evaluar riesgos y diseñar sistemas de prevención
+                  para proteger la integridad física y mental de los
+                  trabajadores en la Ejecución de la Obra: "Mejoramiento de los
+                  servicios educativos en la Institución Educativa Inicial Inga
+                  Allauca con CUI N°2313820"
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">
+                  Ingeniero Residente de Obra
+                </h4>
+                <span>Empresa | Constructora & Minería URETA S.A.C.</span>
+                <span>2025 — 2025</span>
+                <p class="timeline-text">
+                  Ingeniero Residente encargado de la Ejecución de la IOARR:
+                  "Reparación de Defensa Ribereña; en el (la) Quebrada
+                  Cuchimachay, Sector la Oroya antigua con CUI N°2657772"
+                </p>
+              </li>
+              <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">jefe de Operaciones</h4>
+                <span>Entidad | Instituto Vial Provincial de Pasco</span>
+                <span>2024 — 2025</span>
+                <p class="timeline-text">
+                  Ingeniero Civil encargado del área de Operaciones del IVP de
+                  PASCO, en la supervision y gestión del Convenio de Gestion
+                  N°121-2024-MTC/21 para la ejecución del Mantenimiento
+                  Rutinario de Vias Vecinales entre Provias Descentralizado y la
+                  Municipalidad Provincial de Pasco - PIA2024
+                </p>
+              </li>
+            </ol>
+          </section>
+          <section class="skill" aria-labelledby="skills-title">
+            <h3 class="h3 skills-title" id="skills-title">Mis habilidades</h3>
+            <!-- CAMBIO MANUAL: sustituir habilidades y porcentajes por datos definitivos. -->
+            <ul class="skills-list content-card">
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h4 class="h5">
+                    Análisis Estructual | SAP2000, ETABS, SAFE, CSI Bridge y
+                    CivileStudio
+                  </h4>
+                  <data value="80">80%</data>
                 </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 80%"></div>
                 </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h4 class="h5">
+                    Diseño Geometrico de Vias | Civil3D, ISTRAM e InfraWorks
+                  </h4>
+                  <data value="90">90%</data>
                 </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
                 </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h4 class="h5">
+                    Estabilidad de Taludes y Diseño de Muros | GeoStudio2012,
+                    Geo05, Slide y Gawac
+                  </h4>
+                  <data value="70">70%</data>
                 </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%"></div>
                 </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h4 class="h5">
+                    Programación de Hojas de Cálculo | Python, Mathcad, Matlab y
+                    Simulink
+                  </h4>
+                  <data value="50">50%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 50%"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h4 class="h5">
+                    Diseñador Web | HTML, CSS, JavaScript y TypeScript
+                  </h4>
+                  <data value="70">70%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 70%"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h4 class="h5">
+                    Elaboracion de Planos | AutoCAD, Revit, Lumion y SketchUp
+                  </h4>
+                  <data value="90">90%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+              <li class="skills-item">
+                <div class="title-wrapper">
+                  <h4 class="h5">
+                    Conocimiento practico de los Reglamentos, Normas y Leyes
+                    para la ejecucion de obras.
+                  </h4>
+                  <data value="90">90%</data>
+                </div>
+                <div class="skill-progress-bg">
+                  <div class="skill-progress-fill" style="width: 90%"></div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
 
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+        <article
+          class="portfolio"
+          data-page="portfolio"
+          aria-labelledby="portfolio-title"
+        >
+          <header>
+            <h2 class="h2 article-title" id="portfolio-title">Portafolio</h2>
+          </header>
+          <section class="projects" aria-label="Proyectos">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button
+                  class="active"
+                  type="button"
+                  data-filter-btn
+                  data-filter-key="all"
+                >
+                  Todos
+                </button>
+              </li>
+              <li class="filter-item">
+                <button
+                  type="button"
+                  data-filter-btn
+                  data-filter-key="web-design"
+                >
+                  Diseño web
+                </button>
+              </li>
+              <li class="filter-item">
+                <button
+                  type="button"
+                  data-filter-btn
+                  data-filter-key="applications"
+                >
+                  Aplicaciones
+                </button>
+              </li>
+              <li class="filter-item">
+                <button
+                  type="button"
+                  data-filter-btn
+                  data-filter-key="web-development"
+                >
+                  Desarrollo web
+                </button>
+              </li>
+            </ul>
+            <div class="filter-select-box">
+              <button
+                class="filter-select"
+                type="button"
+                data-select
+                aria-expanded="false"
+                aria-controls="portfolio-filter-options"
+              >
+                <span class="select-value" data-select-value
+                  >Seleccionar categoría</span
+                >
+                <span class="select-icon"
+                  ><ion-icon name="chevron-down" aria-hidden="true"></ion-icon
+                ></span>
+              </button>
+              <ul class="select-list" id="portfolio-filter-options">
+                <li class="select-item">
+                  <button type="button" data-select-item data-select-key="all">
+                    Todos
+                  </button>
+                </li>
+                <li class="select-item">
+                  <button
+                    type="button"
+                    data-select-item
+                    data-select-key="web-design"
+                  >
+                    Diseño web
+                  </button>
+                </li>
+                <li class="select-item">
+                  <button
+                    type="button"
+                    data-select-item
+                    data-select-key="applications"
+                  >
+                    Aplicaciones
+                  </button>
+                </li>
+                <li class="select-item">
+                  <button
+                    type="button"
+                    data-select-item
+                    data-select-key="web-development"
+                  >
+                    Desarrollo web
+                  </button>
+                </li>
+              </ul>
             </div>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <!-- CAMBIO MANUAL: cada proyecto debe apuntar a una página propia de case study cuando esa página exista. Solo entonces añadir href real. Si existe una URL externa real, puede utilizarse con target="_blank" rel="noopener noreferrer". -->
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web-development"
+              >
+                <a
+                  data-project-link
+                  data-link-status="pending"
+                  aria-disabled="true"
+                  ><figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon
+                        name="eye-outline"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/project-1.jpg"
+                      alt="Proyecto Finance"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Finance</h3>
+                  <p class="project-category">Desarrollo web</p></a
+                >
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web-development"
+              >
+                <a
+                  data-project-link
+                  data-link-status="pending"
+                  aria-disabled="true"
+                  ><figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon
+                        name="eye-outline"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/project-2.png"
+                      alt="Proyecto Orizon"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Orizon</h3>
+                  <p class="project-category">Desarrollo web</p></a
+                >
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web-design"
+              >
+                <a
+                  data-project-link
+                  data-link-status="pending"
+                  aria-disabled="true"
+                  ><figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon
+                        name="eye-outline"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/project-3.jpg"
+                      alt="Proyecto Fundo"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Fundo</h3>
+                  <p class="project-category">Diseño web</p></a
+                >
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a
+                  data-project-link
+                  data-link-status="pending"
+                  aria-disabled="true"
+                  ><figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon
+                        name="eye-outline"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/project-4.png"
+                      alt="Proyecto Brawlhalla"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Brawlhalla</h3>
+                  <p class="project-category">Aplicaciones</p></a
+                >
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web-design"
+              >
+                <a
+                  data-project-link
+                  data-link-status="pending"
+                  aria-disabled="true"
+                  ><figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon
+                        name="eye-outline"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/project-5.png"
+                      alt="Proyecto DSM"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">DSM.</h3>
+                  <p class="project-category">Diseño web</p></a
+                >
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web-design"
+              >
+                <a
+                  data-project-link
+                  data-link-status="pending"
+                  aria-disabled="true"
+                  ><figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon
+                        name="eye-outline"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/project-6.png"
+                      alt="Proyecto MetaSpark"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">MetaSpark</h3>
+                  <p class="project-category">Diseño web</p></a
+                >
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web-development"
+              >
+                <a
+                  data-project-link
+                  data-link-status="pending"
+                  aria-disabled="true"
+                  ><figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon
+                        name="eye-outline"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/project-7.png"
+                      alt="Proyecto Summary"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Summary</h3>
+                  <p class="project-category">Desarrollo web</p></a
+                >
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a
+                  data-project-link
+                  data-link-status="pending"
+                  aria-disabled="true"
+                  ><figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon
+                        name="eye-outline"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/project-8.jpg"
+                      alt="Proyecto Task Manager"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Task Manager</h3>
+                  <p class="project-category">Aplicaciones</p></a
+                >
+              </li>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web-development"
+              >
+                <a
+                  data-project-link
+                  data-link-status="pending"
+                  aria-disabled="true"
+                  ><figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon
+                        name="eye-outline"
+                        aria-hidden="true"
+                      ></ion-icon>
+                    </div>
+                    <img
+                      src="./assets/images/project-9.png"
+                      alt="Proyecto Arrival"
+                      loading="lazy"
+                    />
+                  </figure>
+                  <h3 class="project-title">Arrival</h3>
+                  <p class="project-category">Desarrollo web</p></a
+                >
+              </li>
+            </ul>
+          </section>
+        </article>
 
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+        <article class="blog" data-page="blog" aria-labelledby="blog-title">
+          <header>
+            <h2 class="h2 article-title" id="blog-title">Blog</h2>
+          </header>
+          <section class="blog-posts">
+            <!-- CAMBIO MANUAL: las tarjetas se mantienen; únicamente la imagen debe enlazar a una URL externa real. Añadir href solo cuando la URL exista. -->
+            <ul class="blog-posts-list">
+              <li class="blog-post-item">
+                <div class="blog-card">
+                  <a
+                    class="blog-image-link"
+                    data-link-status="pending"
+                    aria-disabled="true"
+                    ><figure class="blog-banner-box">
+                      <img
+                        src="./assets/images/blog-1.jpg"
+                        alt="Conferencias de diseño en 2022"
+                        loading="lazy"
+                      /></figure
+                  ></a>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Diseño</p>
+                      <span class="dot"></span
+                      ><time datetime="2022-02-23">23 feb 2022</time>
+                    </div>
+                    <h3 class="h3 blog-item-title">
+                      Conferencias de diseño en 2022
+                    </h3>
+                    <p class="blog-text">
+                      Una revisión introductoria de eventos y tendencias
+                      relevantes para profesionales del diseño.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="blog-post-item">
+                <div class="blog-card">
+                  <a
+                    class="blog-image-link"
+                    data-link-status="pending"
+                    aria-disabled="true"
+                    ><figure class="blog-banner-box">
+                      <img
+                        src="./assets/images/blog-2.jpg"
+                        alt="Las mejores fuentes para diseñadores"
+                        loading="lazy"
+                      /></figure
+                  ></a>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Diseño</p>
+                      <span class="dot"></span
+                      ><time datetime="2022-02-23">23 feb 2022</time>
+                    </div>
+                    <h3 class="h3 blog-item-title">
+                      Las mejores fuentes para diseñadores
+                    </h3>
+                    <p class="blog-text">
+                      Selección ficticia de recursos tipográficos conservada
+                      como contenido temporal del template.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="blog-post-item">
+                <div class="blog-card">
+                  <a
+                    class="blog-image-link"
+                    data-link-status="pending"
+                    aria-disabled="true"
+                    ><figure class="blog-banner-box">
+                      <img
+                        src="./assets/images/blog-3.jpg"
+                        alt="Resumen de diseño número 80"
+                        loading="lazy"
+                      /></figure
+                  ></a>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Diseño</p>
+                      <span class="dot"></span
+                      ><time datetime="2022-02-23">23 feb 2022</time>
+                    </div>
+                    <h3 class="h3 blog-item-title">Resumen de diseño #80</h3>
+                    <p class="blog-text">
+                      Contenido ficticio mantenido temporalmente para conservar
+                      la estructura original.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="blog-post-item">
+                <div class="blog-card">
+                  <a
+                    class="blog-image-link"
+                    data-link-status="pending"
+                    aria-disabled="true"
+                    ><figure class="blog-banner-box">
+                      <img
+                        src="./assets/images/blog-4.jpg"
+                        alt="Interacciones UI de la semana"
+                        loading="lazy"
+                      /></figure
+                  ></a>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Diseño</p>
+                      <span class="dot"></span
+                      ><time datetime="2022-02-23">23 feb 2022</time>
+                    </div>
+                    <h3 class="h3 blog-item-title">
+                      Interacciones UI de la semana
+                    </h3>
+                    <p class="blog-text">
+                      Contenido ficticio mantenido temporalmente para conservar
+                      la estructura original.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="blog-post-item">
+                <div class="blog-card">
+                  <a
+                    class="blog-image-link"
+                    data-link-status="pending"
+                    aria-disabled="true"
+                    ><figure class="blog-banner-box">
+                      <img
+                        src="./assets/images/blog-5.jpg"
+                        alt="El arte olvidado del espaciado"
+                        loading="lazy"
+                      /></figure
+                  ></a>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Diseño</p>
+                      <span class="dot"></span
+                      ><time datetime="2022-02-23">23 feb 2022</time>
+                    </div>
+                    <h3 class="h3 blog-item-title">
+                      El arte olvidado del espaciado
+                    </h3>
+                    <p class="blog-text">
+                      Contenido ficticio mantenido temporalmente para conservar
+                      la estructura original.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="blog-post-item">
+                <div class="blog-card">
+                  <a
+                    class="blog-image-link"
+                    data-link-status="pending"
+                    aria-disabled="true"
+                    ><figure class="blog-banner-box">
+                      <img
+                        src="./assets/images/blog-6.jpg"
+                        alt="Resumen de diseño número 79"
+                        loading="lazy"
+                      /></figure
+                  ></a>
+                  <div class="blog-content">
+                    <div class="blog-meta">
+                      <p class="blog-category">Diseño</p>
+                      <span class="dot"></span
+                      ><time datetime="2022-02-23">23 feb 2022</time>
+                    </div>
+                    <h3 class="h3 blog-item-title">Resumen de diseño #79</h3>
+                    <p class="blog-text">
+                      Contenido ficticio mantenido temporalmente para conservar
+                      la estructura original.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
 
-          </form>
+        <article
+          class="contact"
+          data-page="contact"
+          aria-labelledby="contact-title"
+        >
+          <header>
+            <h2 class="h2 article-title" id="contact-title">Contacto</h2>
+          </header>
+          <section class="mapbox" data-mapbox aria-label="Mapa de ubicación">
+            <!-- CAMBIO MANUAL: sustituir el mapa ficticio por la ubicación definitiva o eliminar esta sección si no debe publicarse. -->
+            <figure>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+                width="400"
+                height="300"
+                loading="lazy"
+                title="Mapa de ubicación ficticia en Sacramento"
+              ></iframe>
+            </figure>
+          </section>
+          <section class="contact-form" aria-labelledby="form-title">
+            <h3 class="h3 form-title" id="form-title">
+              Formulario de contacto
+            </h3>
+            <!-- CAMBIO MANUAL OBLIGATORIO: /api/contact es el contrato previsto para el backend propio. El formulario no puede considerarse operativo hasta desplegar ese endpoint o sustituir action por su URL real. -->
+            <form action="/api/contact" method="POST" class="form" data-form>
+              <div class="input-wrapper">
+                <label class="sr-only" for="fullname">Nombre completo</label>
+                <input
+                  id="fullname"
+                  type="text"
+                  name="fullname"
+                  class="form-input"
+                  placeholder="Nombre completo"
+                  autocomplete="name"
+                  required
+                  data-form-input
+                />
+                <label class="sr-only" for="email">Correo electrónico</label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Correo electrónico"
+                  autocomplete="email"
+                  required
+                  data-form-input
+                />
+              </div>
+              <label class="sr-only" for="message">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                class="form-input"
+                placeholder="Tu mensaje"
+                required
+                data-form-input
+              ></textarea>
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                <ion-icon name="paper-plane" aria-hidden="true"></ion-icon
+                ><span>Enviar mensaje</span>
+              </button>
+            </form>
+          </section>
+        </article>
+      </div>
+    </main>
 
-        </section>
-
-      </article>
-
-    </div>
-
-  </main>
-
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-</body>
-
+    <script src="./assets/js/script.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>

@@ -1,0 +1,78 @@
+/* V0 incremental: correcciones mínimas sin rediseñar style.css original. */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Diferenciar enlaces reales de placeholders informativos. */
+a[data-link-status="pending"] {
+  cursor: default;
+}
+
+.project-item > a[data-link-status="pending"]:hover .project-img::before {
+  background: transparent;
+}
+
+.project-item > a[data-link-status="pending"]:hover .project-item-icon-box {
+  opacity: 0;
+}
+
+/* Blog: se conserva la apariencia de tarjeta, pero solo la imagen podrá enlazar cuando exista una URL real. */
+.blog-card {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  height: 100%;
+  box-shadow: var(--shadow-4);
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.blog-card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--eerie-black-1);
+  z-index: -1;
+}
+
+.blog-image-link {
+  display: block;
+}
+
+.blog-image-link[href]:hover .blog-banner-box img,
+.blog-image-link[href]:focus-visible .blog-banner-box img {
+  transform: scale(1.1);
+}
+
+/* Focus claro para navegación por teclado. */
+:where(a[href], button, [role="button"]):focus-visible {
+  outline: 2px solid var(--orange-yellow-crayola);
+  outline-offset: 3px;
+}
+
+/* QA responsive: la traducción al español alarga la navegación móvil.
+   Este ajuste evita que los cinco controles formen una segunda fila en anchos estrechos. */
+.navbar-link {
+  white-space: nowrap;
+}
+
+@media (max-width: 449px) {
+  .navbar-list {
+    flex-wrap: nowrap;
+    padding-inline: 4px;
+  }
+
+  .navbar-link {
+    font-size: 10px;
+    padding-inline: 5px;
+  }
+}
